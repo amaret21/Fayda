@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration - Fayda SACCO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar bg-primary text-white py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <marquee>Welcome to Fayda SACCO! Register today and enjoy our financial services.</marquee>
+                </div>
+                <div class="col-md-2 text-end">
+                    <select id="language" class="form-select form-select-sm d-inline-block w-auto">
+                        <option value="en">English</option>
+                        <option value="am">አማርኛ</option>
+                        <option value="om">Afaan Oromo</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-end">
+                    <span id="datetime"></span>
+                    <a href="login.html" class="btn btn-sm btn-outline-light">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Fayda SACCO Logo" width="80" height="75"
+                        class="d-inline-block align-top">
+                    <span class="logo-text">Fayda SACCO</span><br>
+                    <small class="logo-slogan">Together to The Future!</small>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">Member Registration</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="registrationForm" action="register.php" method="POST">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                <div class="invalid-feedback">Please enter your full name</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <div class="invalid-feedback">Please enter a valid phone number</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="password" class="form-label">Password *</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <div class="invalid-feedback">Password must be at least 8 characters</div>
+                                    <div class="form-text">At least 8 characters</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        name="confirmPassword" required>
+                                    <div class="invalid-feedback">Passwords must match</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address *</label>
+                                <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+                                <div class="invalid-feedback">Please enter your address</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="dob" class="form-label">Date of Birth *</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" required>
+                                    <div class="invalid-feedback">You must be at least 18 years old</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="gender" class="form-label">Gender *</label>
+                                    <select class="form-select" id="gender" name="gender" required>
+                                        <option value="" selected disabled>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your gender</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="idType" class="form-label">ID Type *</label>
+                                <select class="form-select" id="idType" name="idType" required>
+                                    <option value="" selected disabled>Select ID Type</option>
+                                    <option value="national">National ID</option>
+                                    <option value="passport">Passport</option>
+                                    <option value="driving">Driving License</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your ID type</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="idNumber" class="form-label">ID Number *</label>
+                                <input type="text" class="form-control" id="idNumber" name="idNumber" required>
+                                <div class="invalid-feedback">Please enter your ID number</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="initialDeposit" class="form-label">Initial Deposit (Optional)</label>
+                                <input type="number" class="form-control" id="initialDeposit" name="initialDeposit"
+                                    min="0" step="0.01">
+                                <div class="form-text">Minimum 100 ETB. Can be paid at branch if not deposited now.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#termsModal">Terms and Conditions</a> *
+                                    </label>
+                                    <div class="invalid-feedback">You must accept the terms and conditions</div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                <a href="login.html" class="btn btn-outline-secondary">Already have an account?
+                                    Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Membership Requirements</h6>
+                    <p>To become a member of Fayda SACCO, you must:</p>
+                    <ul>
+                        <li>Be at least 18 years old</li>
+                        <li>Provide valid identification documents</li>
+                        <li>Pay the required membership fee of 200 ETB</li>
+                        <li>Agree to abide by the SACCO's bylaws</li>
+                    </ul>
+
+                    <h6 class="mt-4">Member Responsibilities</h6>
+                    <p>As a member, you agree to:</p>
+                    <ul>
+                        <li>Maintain regular savings as required</li>
+                        <li>Repay loans according to the agreed terms</li>
+                        <li>Attend general meetings when possible</li>
+                        <li>Keep your account information up to date</li>
+                    </ul>
+
+                    <h6 class="mt-4">Data Protection</h6>
+                    <p>We are committed to protecting your personal information in accordance with applicable data
+                        protection laws.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-3">About Fayda SACCO</h5>
+                    <p>Fayda SACCO is a member-owned financial cooperative providing savings, loans, and investment
+                        services to our community.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white">Services</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Addis Ababa, Ethiopia</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +251 123 456 789</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@faydasacco.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Fayda SACCO. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Date and time display
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        setInterval(updateDateTime, 60000);
+        updateDateTime();
+
+        // Form validation
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            let isValid = true;
+            const form = event.target;
+
+            // Validate full name
+            if (!form.fullName.value.trim()) {
+                form.fullName.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.fullName.classList.remove('is-invalid');
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(form.email.value)) {
+                form.email.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.email.classList.remove('is-invalid');
+            }
+
+            // Validate phone (simple validation for Ethiopia)
+            const phoneRegex = /^(\+251|0)[79]\d{8}$/;
+            if (!phoneRegex.test(form.phone.value)) {
+                form.phone.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.phone.classList.remove('is-invalid');
+            }
+
+            // Validate password
+            if (form.password.value.length < 8) {
+                form.password.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.password.classList.remove('is-invalid');
+            }
+
+            // Validate password match
+            if (form.password.value !== form.confirmPassword.value) {
+                form.confirmPassword.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.confirmPassword.classList.remove('is-invalid');
+            }
+
+            // Validate address
+            if (!form.address.value.trim()) {
+                form.address.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.address.classList.remove('is-invalid');
+            }
+
+            // Validate date of birth (must be at least 18 years old)
+            const dob = new Date(form.dob.value);
+            const today = new Date();
+            const age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            if (!form.dob.value || age < 18) {
+                form.dob.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.dob.classList.remove('is-invalid');
+            }
+
+            // Validate gender
+            if (!form.gender.value) {
+                form.gender.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.gender.classList.remove('is-invalid');
+            }
+
+            // Validate ID type
+            if (!form.idType.value) {
+                form.idType.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.idType.classList.remove('is-invalid');
+            }
+
+            // Validate ID number
+            if (!form.idNumber.value.trim()) {
+                form.idNumber.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.idNumber.classList.remove('is-invalid');
+            }
+
+            // Validate terms checkbox
+            if (!form.terms.checked) {
+                form.terms.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                form.terms.classList.remove('is-invalid');
+            }
+
+            // Prevent form submission if validation fails
+            if (!isValid) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Scroll to first invalid field
+                const firstInvalid = form.querySelector('.is-invalid');
+                if (firstInvalid) {
+                    firstInvalid.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }
+
+            form.classList.add('was-validated');
+        });
+
+        // Real-time validation for some fields
+        document.getElementById('password').addEventListener('input', function () {
+            if (this.value.length >= 8) {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        document.getElementById('confirmPassword').addEventListener('input', function () {
+            if (this.value === document.getElementById('password').value) {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        document.getElementById('dob').addEventListener('change', function () {
+            const dob = new Date(this.value);
+            const today = new Date();
+            const age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            if (age >= 18) {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+
+</html>

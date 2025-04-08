@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: ivory;
+    padding: 15px 20px;
+    color: hsl(0, 65%, 3%);
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    /* Align with the left edge */
+    z-index: 1000;
+    transition: all 0.3s ease;/ * Smooth transition for scrolling */
+    /* Smooth transition for scrolling */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+nav {
+    background-color: rgb(255, 248, 248);
+    color: hsl(0, 21%, 5%);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    color: #000;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: hsl(0, 11%, 7%);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #09f334;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+.hero-section {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+.navbar {
+    background-color: #007bff !important;
+}
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+form textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+
+.faq-section {
+    background-color: white;    
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 96%);
+    color: #333;
+}

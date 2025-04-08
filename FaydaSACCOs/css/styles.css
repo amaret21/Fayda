@@ -1,0 +1,551 @@
+/* Color Variables */
+:root {
+    --primary-color: #1a5f23;
+    --primary-dark: #1e3a1a;
+    --primary-light: #4caf50;
+    --accent-color: #ffc107;
+    --text-dark: #212529;
+    --text-light: #6c757d;
+    --bg-light: #f8f9fa;
+    --bg-dark: #1e3a1a;
+    --white: #ffffff;
+    --black: #000000;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #fd7e14;
+    --info-color: #17a2b8;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+    padding-top: 120px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* Header */
+.navbar {
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    z-index: 1020;
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo-slogan {
+    font-size: 0.8rem;
+    color: var(--primary-light);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--text-dark);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    color: var(--text-dark);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(26, 95, 35, 0.1);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('../images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 0;
+    border-radius: 0.75rem;
+    margin: 1rem 0 2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.service-card:hover,
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Loan Calculator */
+.loan-calculator {
+    background-color: var(--bg-light);
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Testimonials */
+.testimonial-item {
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-light);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--bg-dark));
+    color: var(--white);
+    padding: 4rem 0;
+    border-radius: 0.75rem;
+    margin: 3rem 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-links h5 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    padding-left: 5px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    color: var(--white);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Cookie Consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 1rem;
+    z-index: 9999;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .loan-calculator,
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Top Bar - Make it stick to top */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    /* High z-index to stay above other content */
+}
+
+/* Header/Navbar - Make it stick below top bar */
+.navbar {
+    position: fixed;
+    top: 30px;
+    /* Height of top bar */
+    width: 100%;
+    z-index: 1020;
+    /* Slightly below top bar */
+    transition: all 0.3s ease;
+}
+
+/* Adjust body padding to prevent content from hiding behind fixed header */
+body {
+    padding-top: 120px;
+    /* Height of top-bar + navbar */
+}
+
+/* When scrolling, make navbar compact */
+.navbar-scrolled {
+    top: 0;
+    /* Move to very top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make dropdown menus appear above other content */
+.dropdown-menu {
+    z-index: 1050;
+}
+
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+        /* Reduced padding for mobile */
+    }
+
+    .navbar {
+        top: 30px;
+        /* Keep below top bar */
+    }
+}
+
+/* Ensure dropdowns appear above content */
+.dropdown-menu {
+    position: absolute;
+    z-index: 1050;
+    /* Higher than navbar */
+}
+/* Footer Styles */
+.footer {
+    position: relative;
+    background-color: #1e3a1a;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-title {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-link:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-contact li span {
+    transition: all 0.3s ease;
+}
+
+.footer-contact li:hover span {
+    color: white;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.btn-back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Cookie Consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .footer-title {
+        margin-top: 20px;
+    }
+
+    .footer-title::after {
+        width: 40px;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .footer-copyright .text-md-end {
+        justify-content: center;
+    }
+}
+
+/* Top Bar */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    font-size: 0.9rem;
+}
+
+.announcement-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.announcement-scroll {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollAnnouncement 20s linear infinite;
+}
+
+@keyframes scrollAnnouncement {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Header */
+.sticky-top {
+    position: sticky;
+    top: 38px;
+    /* Height of top bar */
+    z-index: 1020;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu-lg {
+    min-width: 600px;
+    padding: 0;
+}
+
+.dropdown-mega .dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Announcement */
+.mobile-announcement {
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .sticky-top {
+        top: 0;
+    }
+
+    .dropdown-menu-lg {
+        min-width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}

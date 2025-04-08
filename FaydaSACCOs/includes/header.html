@@ -1,0 +1,238 @@
+<!-- Top Bar -->
+<div class="top-bar bg-dark text-white py-2">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+                <marquee>Welcome to Fayda SACCOs! Together to The Future! | Next AGM: 15th December 2023</marquee>
+            </div>
+
+            <!-- Right Side Controls -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-language me-1"></i> English
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="am">አማርኛ</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="om">Afaan Oromo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Date/Time -->
+                <div class=" col-md-2 text-end ">
+                    <span id="datetime"></span>
+                    <i class="far fa-clock me-1"></i>
+                    <span id="datetime"></span>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="auth-buttons">
+                    <a href="register.html" class="btn btn-sm btn-outline-light me-2">
+                        <i class="fas fa-user-plus me-1"></i> Register
+                    </a>
+                    <a href="login.html" class="btn btn-sm btn-light text-primary">
+                        <i class="fas fa-sign-in-alt me-1"></i> Member Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <img src="images/logo.png" alt="Fayda SACCOs Logo" width="60" height="55"
+                        class="d-inline-block align-top me-2">
+                    <div class="brand-text">
+                        <span class="logo-text d-block">Fayda SACCOs</span>
+                        <small class="logo-slogan text-muted">Together to The Future!</small>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home fa-fw me-1 d-lg-none"></i> Home
+                        </a>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-info-circle fa-fw me-1 d-lg-none"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#mission">
+                                    <i class="fas fa-bullseye text-muted me-2"></i>Mission Vision & Core Values
+                                </a></li>
+                            <li><a class="dropdown-item" href="about.html#history">
+                                    <i class="fas fa-history text-muted me-2"></i>Our History
+                                </a></li>
+                            <li><a class="dropdown-item" href="about.html#team">
+                                    <i class="fas fa-users text-muted me-2"></i>Our Team
+                                </a></li>
+                            <li><a class="dropdown-item" href="about.html#partners">
+                                    <i class="fas fa-handshake text-muted me-2"></i>Partners
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="about.html#governance">
+                                    <i class="fas fa-landmark text-muted me-2"></i>Governance
+                                </a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products & Services Mega Menu -->
+                    <li class="nav-item dropdown dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-info-circle fa-fw me-1 d-lg-none"></i> Products & Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="servicesDropdown">
+                            <li>
+                                <h6 class="dropdown-header">Conventional Services</h6>
+                            </li>
+                            <hr
+                            <li><a class="dropdown-item" href="services.html#conventional-savings" </a></li>
+                                <h6 class="dropdown-header">Savings Products</h6>
+                                <a class="dropdown-item" href="services.html#regular-savings">
+                                    <i class="fas fa-piggy-bank text-muted me-2"></i>Regular (Mandatory) Savings
+                                </a>
+                                <a class="dropdown-item" href="services.html#voluntary-savings">
+                                    <i class="fas fa-coins text-muted me-2"></i>Voluntary Savings
+                                </a>
+                                <a class="dropdown-item" href="services.html#fixed-deposit">
+                                    <i class="fas fa-lock text-muted me-2"></i>Fixed Deposit
+                                </a>
+                                 <h6 class="dropdown-header">Loan Products</h6>
+                                <a class="dropdown-item" href="services.html#business-loan">
+                                    <i class="fas fa-briefcase text-muted me-2"></i>Business Loan
+                                </a>
+                                <a class="dropdown-item" href="services.html#education-loan">
+                                    <i class="fas fa-graduation-cap text-muted me-2"></i>Education Loan
+                                </a>
+                                <a class="dropdown-item" href="services.html#housing-loan">
+                                    <i class="fas fa-home text-muted me-2"></i>Housing Loan
+                                </a>
+                                </li>
+                            <hr>
+                    <li>
+                        <h6 class="dropdown-header">Bilal Interest Free Service</h6>
+                    </li>
+                    <hr>
+                        </li>
+                                    <h6 class="dropdown-header">Wadia Savings</h6>
+                                    <a class="dropdown-item" href="services.html#wadia-regular">
+                                        <i class="fas fa-mosque text-muted me-2"></i>Wadia Regular (Mandatory) Saving 
+                                    </a>
+                                    <a class="dropdown-item" href="services.html#wadia-voluntary">
+                                        <i class="fas fa-hands-helping text-muted me-2"></i>Wadia Voluntary Saving
+                                    </a>
+                                     <li>
+                                    <h6 class="dropdown-header">Interest Free Financing</h6>
+                                    </li>
+                                    <a class="dropdown-item" href="services.html#murabaha">
+                                        <i class="fas fa-hand-holding-usd text-muted me-2"></i>Murabaha
+                                    </a>
+                                    <a class="dropdown-item" href="services.html#qard-hasan">
+                                        <i class="fas fa-heart text-muted me-2"></i>Qard Hasan
+                                    </a>
+
+                        
+                    </li>
+                    <hr>
+                    <li>
+                    <h6 class="dropdown-header">Other Services</h6>
+                    </li>
+                    <hr>
+                    </li>
+                    <li>
+         
+                        </li>
+                        <a class="dropdown-item" href="services.html#murabaha">
+                            <i class="fas fa-hand-holding-usd text-muted me-2"></i>Training & Consultancy
+                        </a>
+                        <a class="dropdown-item" href="services.html#qard-hasan">
+                            <i class="fas fa-heart text-muted me-2"></i>Technology Solutions
+                        </a>
+            </ul>
+                    </li>
+                    
+                    <li>
+                    <!-- Media Items -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-info-circle fa-fw me-1 d-lg-none"></i> Media
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="media.html#photo-gallery">
+                                    <i class="fas fa-camera text-muted me-2"></i>Photo Gallery
+                                </a></li>
+                            <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="aboutDropdown"></ul>
+                            <li><a class="dropdown-item" href="media.html#video">
+                                    <i class="fas fa-video text-muted me-2"></i>Video 
+                        </ul>
+                    <li>
+                    <!-- Document Items -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-photo-video fa-fw me-1 d-lg-none"></i> Documents
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="document.html#awards-recognition">
+                                    <i class="fas fa-certificate text-muted me-2"></i>Awards & Recognition
+                                </a></li>
+                            <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="aboutDropdown"></ul>
+                            <li><a class="dropdown-item" href="document.html#testimonials">
+                                    <i class="fas fa-respect text-muted me-2"></i>Testimonials
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vacancy.html">
+                            <i class="fas fa-briefcase fa-fw me-1 d-lg-none"></i> Vacancy
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope fa-fw me-1 d-lg-none"></i> Contact Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope fa-fw me-1 d-lg-none"></i> FAQs
+                        </a>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Announcement Banner (Hidden on desktop) -->
+<div class="d-lg-none mobile-announcement bg-warning text-dark py-1 text-center">
+    <small><i class="fas fa-exclamation-circle me-1"></i> Next AGM: 15th December 2023</small>
+</div>

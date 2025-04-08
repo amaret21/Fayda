@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - Fayda SACCO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar bg-primary text-white py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <marquee>Welcome to Fayda SACCOs! Together to The Future! | Next AGM: 15th December 2023</marquee>
+                </div>
+                <div class="col-md-2 text-end">
+                    <select id="language" class="form-select form-select-sm d-inline-block w-auto">
+                        <option value="en">English</option>
+                        <option value="am">አማርኛ</option>
+                        <option value="om">Afaan Oromo</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-end">
+                    <span id="datetime"></span>
+                    <a href="register.html" class="btn btn-sm btn-outline-light ms-2">Register</a>
+                    <a href="login.html" class="btn btn-sm btn-outline-light">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Fayda SACCOs Logo" width="80" height="75"
+                    class="d-inline-block align-top">
+                <span class="logo-text">Fayda SACCOs</span><br>
+                <small class="logo-slogan">Together to The Future!</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#mission">Mission, Vision & Core Values</a>
+                            </li>
+                            <li><a class="dropdown-item" href="about.html#history">Our History</a></li>
+                            <li><a class="dropdown-item" href="about.html#team">Our Team</a></li>
+                            <li><a class="dropdown-item" href="about.html#partners">Partners</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services Dropdown with nested dropdowns -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product and Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+
+                            <!-- Conventional Service with nested dropdown -->
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Conventional
+                                    Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="services.html#regular-savings">Regular
+                                            (Mandatory) Savings</a></li>
+                                    <li><a class="dropdown-item" href="services.html#voluntary-savings">Voluntary
+                                            Savings</a></li>
+                                    <li><a class="dropdown-item" href="services.html#group-savings">Group Savings</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#fixed-deposit">Fixed Deposit</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#share-capital">Share Capital</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#consumption-loan">Consumption
+                                            Loans</a></li>
+                                    <li><a class="dropdown-item" href="services.html#business-loan">Business Loans</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#education-loan">Education Loans</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#housing-loan">Housing Loans</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="services.html#emergency-loan">Emergency Loans</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Interest Free with nested dropdown -->
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Bilal
+                                    Interest Free Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="services.html#regular-savings">Wadia Regular
+                                            (Mandatory) Savings</a></li>
+                                    <li><a class="dropdown-item" href="services.html#voluntary-savings">Wadia Voluntary
+                                            Savings</a></li>
+                                    <li><a class="dropdown-item" href="services.html#group-savings">Wadia Group
+                                            Savings</a></li>
+                                    <li><a class="dropdown-item" href="services.html#murabaha">Murabaha (Cost-Plus
+                                            Financing)</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropdown-item" href="services.html#training-onsultancy">Training and
+                                    Consultancy</a></li>
+                            <li><a class="dropdown-item" href="services.html#technology">Technology</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!-- Media Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Media
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
+                            <li><a class="dropdown-item" href="media.html#photo-galary">Photo Galary</a>
+                            </li>
+                            <li><a class="dropdown-item" href="media.html#video">Videos</a></li>
+                        </ul>
+
+                        <!-- Document Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="documentDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Documents
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="documentDropdown">
+                            <li><a class="dropdown-item" href="document.html#awards-ertificates">Awards and
+                                    Certificates</a>
+                            </li>
+                            <li><a class="dropdown-item" href="document.html#testimonials">Testimonials</a></li>
+                        </ul>
+
+                    <li class="nav-item"><a class="nav-link" href="vacancy.html">Vacancy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Documents</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Documents</h1>
+
+        <!-- Documents Categories -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-file-alt text-primary me-2"></i>Legal Documents</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="documents/sacco-constitution.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>SACCO Constitution
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/bylaws.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Bylaws
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/license.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Operating License
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-chart-bar text-primary me-2"></i>Financial Reports</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="documents/annual-report-2022.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Annual Report 2022
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/audit-report-2022.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Audit Report 2022
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/financial-statement-2022.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Financial Statement 2022
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-award text-primary me-2"></i>Awards & Certificates</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="documents/best-sacco-2021.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Best SACCO 2021
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/iso-certificate.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>ISO Certification
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="documents/member-satisfaction-award.pdf" class="text-decoration-none" download>
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Member Satisfaction Award
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Membership Forms -->
+        <section class="mt-5">
+            <h2 class="mb-4"><i class="fas fa-file-signature text-primary me-2"></i>Membership Forms</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h4>New Member Application</h4>
+                                <p>Complete this form to apply for membership with Fayda SACCO.</p>
+                                <a href="documents/membership-application.pdf" class="btn btn-outline-primary" download>
+                                    <i class="fas fa-download me-2"></i>Download Form
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h4>Loan Application</h4>
+                                <p>Use this form to apply for any of our loan products.</p>
+                                <a href="documents/loan-application.pdf" class="btn btn-outline-primary" download>
+                                    <i class="fas fa-download me-2"></i>Download Form
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+        <footer class="bg-dark text-white pt-4 pb-2">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <h5 class="mb-3">About Fayda SACCOs</h5>
+                        <p>Fayda SACCOs is a member-owned financial cooperative providing savings, loans, and investment
+                            services to our community since Thursday, 31 Oct 2024.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <h5 class="mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                            <li class="mb-2"><a href="services.html" class="text-white">Services</a></li>
+                            <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                            <li class="mb-2"><a href="register.html" class="text-white">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="mb-3">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Addis Ababa, Ethiopia</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i> +251 9 95 56 56 69</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i> FaydaSACCO@gmail.com</li>
+                            <li class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Fri: 8:00AM - 5:00PM</li>
+                            <li class="mb-2"><i class="fas fa-clock me-2"></i> Sat: 8:00AM - 12:00PM</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="mb-3">Newsletter</h5>
+                        <p>Subscribe to our newsletter for the latest updates.</p>
+                        <form class="mb-3">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <div class="visitor-counter">
+                            <p><i class="fas fa-users me-2"></i> Visitors: <span id="visitor-count">Loading...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Fayda SACCOs. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white me-3">Terms of Service</a>
+                        <a href="#" class="text-white">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Cookie Consent -->
+        <div class="cookie-consent bg-dark text-white p-3" id="cookieConsent" style="display: none;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <p class="mb-md-0">We use cookies to ensure you get the best experience on our website. By continuing to
+                            browse, you agree to our use of cookies.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <button class="btn btn-sm btn-primary" id="acceptCookies">Accept</button>
+                        <a href="#" class="btn btn-sm btn-outline-light ms-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Scripts (same as index.html) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
